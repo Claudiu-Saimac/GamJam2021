@@ -32,6 +32,11 @@ public class Clock : MonoBehaviour
         }
     }
 
+    public void Stop()
+    {
+        Started = false;
+    }
+
     private void DrawTime()
     {
         Img.fillAmount = CountTime/StartTime;

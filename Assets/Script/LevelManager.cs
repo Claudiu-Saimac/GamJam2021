@@ -14,7 +14,6 @@ public class LevelManager : MonoBehaviour
     public GameObject Content;
     public ItemHolder ItemHolderPrefab;
 
-    public TextMeshProUGUI Text;
     private List<ItemHolder> _itemHolders = new List<ItemHolder>();
     public GameObject ItemDragHolder;
     public Clock Clock;
@@ -48,6 +47,11 @@ public class LevelManager : MonoBehaviour
             _itemHolders.Add(go);
         }
        
+    }
+
+    public void PlayerFinished()
+    {
+        Clock.Stop();
     }
 
     public void Undo(FoodTypes type)
