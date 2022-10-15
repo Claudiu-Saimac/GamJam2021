@@ -20,18 +20,21 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 1
       Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
       FoodEvent:
-        Dialog: OK
+        Dialog: 'Good '
         LastStep: 0
         NeedRedo: 0
+        State: 0
     - Type: 0
       Sprite: {fileID: 21300000, guid: 4a8a0535bbbdc9b42a62ed3441e8d050, type: 3}
       FoodEvent:
         Dialog: Well Done !
         LastStep: 1
         NeedRedo: 0
+        State: 0
   - Steps:
     - Type: 2
       Sprite: {fileID: 21300000, guid: 4d20c4798019b6344ade7ea6171ffb91, type: 3}
@@ -39,12 +42,14 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 0
     - Type: 0
       Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
       FoodEvent:
         Dialog: Seriously !? Milk first ? Redo!
         LastStep: 0
         NeedRedo: 1
+        State: 1
   - Steps:
     - Type: 2
       Sprite: {fileID: 21300000, guid: 4d20c4798019b6344ade7ea6171ffb91, type: 3}
@@ -52,12 +57,14 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 0
     - Type: 3
       Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
       FoodEvent:
-        Dialog: Seriously !? Milk first ? Redo!
+        Dialog: 'Seriously !? Milk first ? And is Soy Milk, Redo! '
         LastStep: 0
         NeedRedo: 1
+        State: 1
   - Steps:
     - Type: 2
       Sprite: {fileID: 21300000, guid: 4d20c4798019b6344ade7ea6171ffb91, type: 3}
@@ -65,16 +72,19 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 1
       Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
       FoodEvent:
-        Dialog: OK
+        Dialog: 'Good '
         LastStep: 0
         NeedRedo: 0
+        State: 0
     - Type: 3
       Sprite: {fileID: 21300000, guid: 4a8a0535bbbdc9b42a62ed3441e8d050, type: 3}
       FoodEvent:
         Dialog: I will accepted it ,But I don't like Soy Milk!
         LastStep: 1
         NeedRedo: 0
-  LevelAllFoodTypes: 00000000010000000200000003000000
+        State: 0
+  LevelAllFoodTypes: 02000000000000000100000003000000

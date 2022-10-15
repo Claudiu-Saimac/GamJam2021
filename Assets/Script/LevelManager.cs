@@ -67,7 +67,8 @@ public class LevelManager : MonoBehaviour
     public void PlayerFailed()
     {
         GameRunning = false;
-        DialogManager.Instance.SetText("You Failed!");
+        DialogManager.Instance.SetFaceState(FoodEvent.BearState.Normal);
+        DialogManager.Instance.SetText("You Failed! Try Again");
         
     }
     public void PlayerFinished()

@@ -27,7 +27,10 @@ public class FoodSocket : MonoBehaviour
     private void Back()
     {
         if (LevelManager.Instance.GameRunning)
+        {
+            DOTween.Kill(BackButton.transform);
             Undo();
+        }
     }
 
     public bool CheckFoodLogic(FoodItem foodItem)
@@ -66,7 +69,7 @@ public class FoodSocket : MonoBehaviour
 
     private void AnimateButton()
     {
-        BackButton.transform.DOPunchScale(new Vector3(1.05f, 1.05f, 1.05f), 0.75f,1,0.2f);
+        BackButton.transform.DOPunchScale(new Vector3(1.02f, 1.02f, 1.02f), 0.75f,1,0.1f).SetLoops(3);
     }
 
     public void Undo()
