@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
         public string name;
         public AudioClip clip;
     }
+
     private static AudioManager _instance;
     public AudioSource EffectsSource;
     public AudioSource MusicSource;
@@ -26,12 +27,13 @@ public class AudioManager : MonoBehaviour
 
         else if (_instance != this)
         {
-          //  Destroy(gameObject);
+            Destroy(gameObject);
         }
 
         DontDestroyOnLoad(gameObject);
     }
-    public void Play(string clipName,bool loop=false)
+
+    public void Play(string clipName, bool loop = false)
     {
         AudioClip clip = null;
         foreach (var baseSound in AllSounds.Where(sunet => sunet.name == clipName))
@@ -56,9 +58,9 @@ public class AudioManager : MonoBehaviour
         EffectsSource.clip = clip;
         EffectsSource.Stop();
     }
-    
-    
-    public void PlayMusic(string clipName,bool loop=false)
+
+
+    public void PlayMusic(string clipName, bool loop = false)
     {
         AudioClip clip = null;
         foreach (var baseSound in AllSounds.Where(sunet => sunet.name == clipName))
