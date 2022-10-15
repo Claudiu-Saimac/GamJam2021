@@ -54,6 +54,7 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         }
         
         var result =socket.CheckFoodLogic(this);
+
         if(result==false)
         {
             ItemHolder.Reset();

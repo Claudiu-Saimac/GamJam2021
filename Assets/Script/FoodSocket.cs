@@ -49,8 +49,11 @@ public class FoodSocket : MonoBehaviour
             SocketImage.sprite = result.Sprite;
         }
 
-        CurrentFood.Add(foodItem.FoodType);
+        if (result.FoodEvent.LastStep)
+            LevelManager.Instance.PlayerFinished();
 
+        CurrentFood.Add(foodItem.FoodType);
+        
         return true;
     }
 
@@ -66,14 +69,14 @@ public class FoodSocket : MonoBehaviour
                 SocketImage.color = new Color(255, 255, 255, 0);
                 CurrentFood.Remove(CurrentFood[0]);
 
-                LevelManager.Instance.Text.text = string.Empty;
+                DialogManager.Instance.CleanText();
 
                 return;
         }
 
         var lastFoodItem = CurrentFood[^1];
         LevelManager.Instance.Undo(lastFoodItem);
-        LevelManager.Instance.Text.text = string.Empty;
+        DialogManager.Instance.CleanText();
 
         CurrentFood.Remove(lastFoodItem);
 

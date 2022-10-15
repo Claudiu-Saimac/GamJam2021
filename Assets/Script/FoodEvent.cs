@@ -9,6 +9,6 @@ public class FoodEvent
 
     public virtual void Invoke()
     {
-        LevelManager.Instance.Text.text = Dialog;
+        DialogManager.Instance.SetText(Dialog);
     }
 }
