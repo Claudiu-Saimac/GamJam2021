@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class FoodSocket : MonoBehaviour
     public FoodStep _lastFoodStep;
 
     public Button BackButton;
-   
+
     public void Awake()
     {
         BackButton.onClick.AddListener(Back);
@@ -25,7 +26,8 @@ public class FoodSocket : MonoBehaviour
     }
     private void Back()
     {
-        Undo();
+        if (LevelManager.Instance.GameRunning)
+            Undo();
     }
 
     public bool CheckFoodLogic(FoodItem foodItem)
@@ -49,12 +51,22 @@ public class FoodSocket : MonoBehaviour
             SocketImage.sprite = result.Sprite;
         }
 
+        if (result.FoodEvent.NeedRedo)
+        {
+            AnimateButton();
+        }
+
         if (result.FoodEvent.LastStep)
             LevelManager.Instance.PlayerFinished();
 
         CurrentFood.Add(foodItem.FoodType);
-        
+
         return true;
+    }
+
+    private void AnimateButton()
+    {
+        BackButton.transform.DOPunchScale(new Vector3(1.05f, 1.05f, 1.05f), 0.75f,1,0.2f);
     }
 
     public void Undo()
@@ -65,7 +77,7 @@ public class FoodSocket : MonoBehaviour
                 return;
             case 1:
                 LevelManager.Instance.Undo(CurrentFood[0]);
-                
+
                 SocketImage.color = new Color(255, 255, 255, 0);
                 CurrentFood.Remove(CurrentFood[0]);
 

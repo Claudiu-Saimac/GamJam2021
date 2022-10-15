@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
+    public event Action OnTimeEnded;
+
     public float TimeRemaining;
     public float StartTime;
     public float CountTime;
@@ -29,6 +32,11 @@ public class Clock : MonoBehaviour
             CountTime = StartTime - TimeRemaining;
 
             DrawTime();
+        }
+        else
+        {
+            Started = false;
+            OnTimeEnded?.Invoke();
         }
     }
 

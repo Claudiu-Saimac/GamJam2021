@@ -25,8 +25,11 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!LevelManager.Instance.GameRunning)
+            return;
+
         transform.SetParent(LevelManager.Instance.ItemDragHolder.transform);
-        
+
         if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform as RectTransform, eventData.position, eventData.pressEventCamera, out var globalMousePos))
         {
             offset = transform.position - globalMousePos;
@@ -35,6 +38,9 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!LevelManager.Instance.GameRunning)
+            return;
+
         if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform as RectTransform, eventData.position, eventData.pressEventCamera, out var globalMousePos))
         {
             transform.position = globalMousePos + offset;
@@ -43,6 +49,9 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!LevelManager.Instance.GameRunning)
+            return;
+
         transform.SetParent(LevelManager.Instance.Content.transform);
 
         var socket = CheckSocket();
@@ -52,10 +61,10 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             Destroy(gameObject);
             return;
         }
-        
-        var result =socket.CheckFoodLogic(this);
 
-        if(result==false)
+        var result = socket.CheckFoodLogic(this);
+
+        if (result == false)
         {
             ItemHolder.Reset();
             Destroy(gameObject);

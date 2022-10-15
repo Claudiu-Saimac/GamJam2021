@@ -15,19 +15,34 @@ public class LevelManager : MonoBehaviour
     public ItemHolder ItemHolderPrefab;
 
     private List<ItemHolder> _itemHolders = new List<ItemHolder>();
+
     public GameObject ItemDragHolder;
     public Clock Clock;
+
+    public bool GameRunning { get; set; }
+
     public void Awake()
     {
         Instance = this;
         SetRecipe();
         StartTimer();
         SetFoodItems();
+        GameRunning = true;
     }
 
+    private void OnDestroy()
+    {
+        Clock.OnTimeEnded -= Clock_OnTimeEnded;
+    }
     private void StartTimer()
     {
         Clock.StartClock(60);
+        Clock.OnTimeEnded += Clock_OnTimeEnded;
+    }
+
+    private void Clock_OnTimeEnded()
+    {
+        PlayerFailed();
     }
 
     private void SetFoodItems()
@@ -49,9 +64,16 @@ public class LevelManager : MonoBehaviour
        
     }
 
+    public void PlayerFailed()
+    {
+        GameRunning = false;
+        DialogManager.Instance.SetText("You Failed!");
+        
+    }
     public void PlayerFinished()
     {
         Clock.Stop();
+        GameRunning = false;
     }
 
     public void Undo(FoodTypes type)
