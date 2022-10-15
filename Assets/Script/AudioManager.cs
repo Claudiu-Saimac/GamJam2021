@@ -1,24 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [Serializable]
+    public class BaseSound
+    {
+        public string name;
+        public AudioClip clip;
+    }
     private static AudioManager _instance;
     public AudioSource EffectsSource;
     public AudioSource MusicSource;
-    public AudioClip[] Clips;
-    public Dictionary<string, AudioClip> AllSounds;
-
-    // public enum Sounds
-    // {
-    //     GoodMilk,
-    //     BadMilk,
-    //     MilkClick,
-    //     BowlClick,
-    //     CerealClick
-    // }
+    public List<BaseSound> AllSounds;
 
     private void Awake()
     {
@@ -37,8 +34,12 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string clipName, bool loop)
     {
-        AudioClip clip;
-        AllSounds.TryGetValue(clipName, out clip);
+        AudioClip clip = null;
+        foreach (var baseSound in AllSounds.Where(sunet => sunet.name == clipName))
+        {
+            clip = baseSound.clip;
+        }
+
         EffectsSource.clip = clip;
         EffectsSource.loop = loop;
         EffectsSource.Play();
@@ -47,8 +48,13 @@ public class AudioManager : MonoBehaviour
     // Play a single clip through the music source.
     public void PlayMusic(string clipName)
     {
-        AudioClip clip;
-        AllSounds.TryGetValue(clipName, out clip);
+        AudioClip clip = null;
+        foreach (var baseSound in AllSounds.Where(sunet => sunet.name == clipName))
+        {
+            clip = baseSound.clip;
+        }
+
+        EffectsSource.clip = clip;
         MusicSource.clip = clip;
         MusicSource.Stop();
     }
