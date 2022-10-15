@@ -17,11 +17,18 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI Text;
     private List<ItemHolder> _itemHolders = new List<ItemHolder>();
     public GameObject ItemDragHolder;
+    public Clock Clock;
     public void Awake()
     {
         Instance = this;
         SetRecipe();
+        StartTimer();
         SetFoodItems();
+    }
+
+    private void StartTimer()
+    {
+        Clock.StartClock(60);
     }
 
     private void SetFoodItems()

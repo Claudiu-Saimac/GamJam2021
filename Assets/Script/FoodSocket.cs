@@ -13,8 +13,7 @@ public class FoodSocket : MonoBehaviour
     public FoodStep _lastFoodStep;
 
     public Button BackButton;
-    public Sprite BaseSprite;
-
+   
     public void Awake()
     {
         BackButton.onClick.AddListener(Back);
@@ -43,8 +42,12 @@ public class FoodSocket : MonoBehaviour
         _lastFoodStep = result;
 
         result.FoodEvent.Invoke();
+
         if (result.Sprite != null)
+        {
+            SocketImage.color = new Color(255, 255, 255, 255);
             SocketImage.sprite = result.Sprite;
+        }
 
         CurrentFood.Add(foodItem.FoodType);
 
@@ -59,7 +62,8 @@ public class FoodSocket : MonoBehaviour
                 return;
             case 1:
                 LevelManager.Instance.Undo(CurrentFood[0]);
-                SocketImage.sprite = BaseSprite;
+                
+                SocketImage.color = new Color(255, 255, 255, 0);
                 CurrentFood.Remove(CurrentFood[0]);
 
                 LevelManager.Instance.Text.text = string.Empty;
@@ -83,7 +87,10 @@ public class FoodSocket : MonoBehaviour
         _lastFoodStep = result;
 
         if (result.Sprite != null)
+        {
+            SocketImage.color = new Color(255, 255, 255, 255);
             SocketImage.sprite = result.Sprite;
+        }
 
     }
 }
