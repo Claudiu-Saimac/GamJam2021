@@ -619,6 +619,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d8b2104cf05f8c45bf57bc46fee720a, type: 3}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[5].name
+      value: Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 64283dcbe6c9d0d49a5d2a42638599a3, type: 3}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[6].name
+      value: Tarantella
+      objectReference: {fileID: 0}
     - target: {fileID: 3563265698321486936, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
       propertyPath: m_Name
       value: AudioManager (1)
