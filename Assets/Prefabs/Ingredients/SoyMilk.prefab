@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03a7f85092de2a46af1c03a1fb2b893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodType: 0
+  FoodType: 3
   LayerMask:
     serializedVersion: 2
     m_Bits: 32

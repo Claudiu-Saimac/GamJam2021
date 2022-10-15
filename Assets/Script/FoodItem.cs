@@ -16,6 +16,8 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public ItemHolder ItemHolder { get; set; }
 
+    private Vector3 offset;
+
     public void Awake()
     {
         _startPosition = gameObject.transform.position;
@@ -23,19 +25,26 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        transform.SetParent(LevelManager.Instance.ItemDragHolder.transform);
+        
+        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform as RectTransform, eventData.position, eventData.pressEventCamera, out var globalMousePos))
+        {
+            offset = transform.position - globalMousePos;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform as RectTransform, eventData.position, eventData.pressEventCamera, out var globalMousePos))
         {
-            transform.position = globalMousePos;
+            transform.position = globalMousePos + offset;
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        transform.SetParent(LevelManager.Instance.Content.transform);
+
         var socket = CheckSocket();
         if (socket == null)
         {
@@ -44,7 +53,17 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             return;
         }
         
-        socket.CheckFoodLogic(this);
+        var result =socket.CheckFoodLogic(this);
+        if(result==false)
+        {
+            ItemHolder.Reset();
+            Destroy(gameObject);
+        }
+        else
+        {
+            ItemHolder.gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 
     private FoodSocket CheckSocket()
@@ -77,4 +96,5 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         return null;
     }
+
 }
