@@ -1,26 +1,15 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemHolder : MonoBehaviour, IPointerClickHandler
+public class ItemHolder : MonoBehaviour
 {
     public FoodItem FoodItemPrefab;
 
-    [Space]
-    public Sprite IconText;
     public FoodTypes FoodType;
 
     private FoodItem _itemInstance;
 
-    public void Awake()
-    {
-        Reset();
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-       
-    }
-
+    
     public void Reset()
     {
         _itemInstance = Instantiate(FoodItemPrefab, new Vector3(0, 0, 0), Quaternion.identity);
@@ -32,9 +21,3 @@ public class ItemHolder : MonoBehaviour, IPointerClickHandler
         _itemInstance.ItemHolder = this;
     }
 }
-
-public enum FoodTypes
-{
-    Milk
-}
-
