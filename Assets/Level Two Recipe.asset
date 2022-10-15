@@ -128,4 +128,4 @@ MonoBehaviour:
       FoodEvent:
         Dialog: Didn't you forgot some goddamn balls ?
         LastStep: 0
-  LevelAllFoodTypes: 08000000050000000700000006000000
+  LevelAllFoodTypes: 080000000500000007000000060000000600000005000000
