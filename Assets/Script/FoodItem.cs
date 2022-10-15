@@ -12,8 +12,6 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public Vector2 ColliderSize = new Vector2(2, 2);
     public Vector2 ColliderOffset;
 
-    private List<Collider2D> _colliderPool = new List<Collider2D>(10);
-
     private Vector3 _startPosition;
 
     public ItemHolder ItemHolder { get; set; }
@@ -45,13 +43,14 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             Destroy(gameObject);
             return;
         }
-        Debug.LogWarning("salut");
-
+        
         socket.CheckFoodLogic(this);
     }
 
     private FoodSocket CheckSocket()
     {
+        var colliderPool = new List<Collider2D>(10);
+
         var contactFilter = new ContactFilter2D()
         {
             layerMask = LayerMask,
@@ -60,20 +59,16 @@ public class FoodItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         };
 
         var count = Physics2D.OverlapBox((Vector2)transform.position + ColliderOffset, ColliderSize, 0,
-            contactFilter, _colliderPool);
+            contactFilter, colliderPool);
 
         var scripType = typeof(FoodSocket);
 
         for (var i = 0; i < count; i++)
         {
-            var comp = _colliderPool[i].GetComponent(scripType);
-
-            Debug.LogWarning(comp);
+            var comp = colliderPool[i].GetComponent(scripType);
 
             if (comp == null)
                 continue;
-
-            Debug.LogWarning(comp);
 
             var socket = (FoodSocket)comp;
 
