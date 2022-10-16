@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RecipeBook:
   - {fileID: 11400000, guid: ebec4824e88401f4e9496203590114d3, type: 2}
+  - {fileID: 11400000, guid: 4efe4f72b5497c146a0c8862268e908a, type: 2}
   FoodTypesReferenceHolder: {fileID: 11400000, guid: a4c3a24efa4a69847a17ab070874f89f, type: 2}
 --- !u!1 &1267146628
 GameObject:
@@ -333,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 1872081049}
     - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
       propertyPath: AllSounds.Array.size
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
       propertyPath: AllSounds.Array.data[5].clip
@@ -406,6 +407,22 @@ PrefabInstance:
     - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
       propertyPath: AllSounds.Array.data[13].name
       value: QuoteNormal3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[14].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 982f7e5713f7066489b0a1599d1f36ec, type: 3}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[14].name
+      value: Prajit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[15].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f309d03cc94f0f4ba071c1158b4bd92, type: 3}
+    - target: {fileID: 2827147249817083994, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: AllSounds.Array.data[15].name
+      value: Chop
       objectReference: {fileID: 0}
     - target: {fileID: 3563265698321486936, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
       propertyPath: m_Name

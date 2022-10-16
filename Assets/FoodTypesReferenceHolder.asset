@@ -21,8 +21,6 @@ MonoBehaviour:
     FoodItem: {fileID: 2423176634220500441, guid: 4f8d8d7e3cb540d4391d0cdf5c2666c0, type: 3}
   - Type: 2
     FoodItem: {fileID: 235003882018924080, guid: a3d2e10e0929eec4980261679b6fc91a, type: 3}
-  - Type: 4
-    FoodItem: {fileID: 2423176634220500441, guid: 748b6f386c994584db02e88ca2bb038d, type: 3}
   - Type: 5
     FoodItem: {fileID: 2423176634220500441, guid: c8375af61cbf4e14692321694f551f9e, type: 3}
   - Type: 6
@@ -49,3 +47,7 @@ MonoBehaviour:
     FoodItem: {fileID: 2423176634220500441, guid: 7039b3457e218214485d861edd16d9be, type: 3}
   - Type: 8
     FoodItem: {fileID: 2423176634220500441, guid: 62a28b050c1b0ed41bb275283d65aaef, type: 3}
+  - Type: 20
+    FoodItem: {fileID: 7780535616251924320, guid: 6841e0d1a2455354392af7039c13ef51, type: 3}
+  - Type: 21
+    FoodItem: {fileID: 235003882018924080, guid: 50fe13e0eda55164085f2a9db6ac11ef, type: 3}

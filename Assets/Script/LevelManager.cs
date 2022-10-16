@@ -19,6 +19,9 @@ public class LevelManager : MonoBehaviour
     public GameObject ItemDragHolder;
     public Clock Clock;
 
+    public float LevelTime;
+
+    public FoodEvolveStates FoodEvolveStates;
     public bool GameRunning { get; set; }
 
     public void Awake()
@@ -36,7 +39,7 @@ public class LevelManager : MonoBehaviour
     }
     private void StartTimer()
     {
-        Clock.StartClock(60);
+        Clock.StartClock(LevelTime);
         Clock.OnTimeEnded += Clock_OnTimeEnded;
     }
 
@@ -79,14 +82,20 @@ public class LevelManager : MonoBehaviour
 
     public void Undo(FoodTypes type)
     {
+        var foodType = FoodEvolveStates.GetBaseState(type);
+
         foreach (var holder in _itemHolders)
         {
-            if (holder.FoodType == type)
+            if (holder.FoodType == foodType)
             {
+                if(holder.gameObject.activeInHierarchy)
+                    continue;
+
                 holder.gameObject.SetActive(true);
                 holder.Reset();
                 return;
             }
+            
         }
     }
 

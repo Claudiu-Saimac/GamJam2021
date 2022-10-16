@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6173383249946286176
+--- !u!1 &8254090897161060599
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3256842154614035635}
-  - component: {fileID: 1461625999108936171}
-  - component: {fileID: 2257141754166843682}
-  - component: {fileID: 2423176634220500441}
+  - component: {fileID: 5940655670664769955}
+  - component: {fileID: 1702388580098815711}
+  - component: {fileID: 272152084814411283}
+  - component: {fileID: 235003882018924080}
   m_Layer: 5
-  m_Name: Bacon
+  m_Name: MixingBowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3256842154614035635
+--- !u!224 &5940655670664769955
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6173383249946286176}
+  m_GameObject: {fileID: 8254090897161060599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,21 +39,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1461625999108936171
+--- !u!222 &1702388580098815711
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6173383249946286176}
+  m_GameObject: {fileID: 8254090897161060599}
   m_CullTransparentMesh: 1
---- !u!114 &2257141754166843682
+--- !u!114 &272152084814411283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6173383249946286176}
+  m_GameObject: {fileID: 8254090897161060599}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -67,9 +67,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce60be3f7fcbe5948a6b7503bf41b1a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8011d22b072cda3409b597635a7423b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -77,19 +77,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2423176634220500441
+--- !u!114 &235003882018924080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6173383249946286176}
+  m_GameObject: {fileID: 8254090897161060599}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a03a7f85092de2a46af1c03a1fb2b893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodType: 4
+  FoodType: 21
+  CanEvolve: 0
+  EvolveTypes: 0
+  EvolvedImage: {fileID: 0}
   LayerMask:
     serializedVersion: 2
     m_Bits: 32

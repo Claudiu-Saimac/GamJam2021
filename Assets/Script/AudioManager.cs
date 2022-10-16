@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void PlayMusic(string clipName, bool loop = false)
+    public void PlayMusic(string clipName, bool loop = true)
     {
         AudioClip clip = null;
         foreach (var baseSound in AllSounds.Where(sunet => sunet.name == clipName))
@@ -71,6 +71,17 @@ public class AudioManager : MonoBehaviour
         MusicSource.clip = clip;
         MusicSource.loop = loop;
         MusicSource.Play();
+        
+    }
+
+    public void PauseMusic()
+    {
+        MusicSource.Pause();
+    }
+
+    public void ContinueMusic()
+    {
+        MusicSource.UnPause();
     }
 
     // Play a single clip through the music source.
