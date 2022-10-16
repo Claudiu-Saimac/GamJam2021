@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
         public AudioClip clip;
     }
 
-    private static AudioManager _instance;
+    public static AudioManager _instance;
     public AudioSource EffectsSource;
     public AudioSource MusicSource;
     public List<BaseSound> AllSounds;

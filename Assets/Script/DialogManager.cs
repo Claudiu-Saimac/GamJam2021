@@ -1,14 +1,15 @@
 using System.Collections;
 using DG.Tweening;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DialogManager : MonoBehaviour
 {
     public const float DialogLifeSpan = 2f;
     public static DialogManager Instance;
-    [SerializeField]
-    private TextMeshProUGUI _text;
+    [SerializeField] private TextMeshProUGUI _text;
 
     public GameObject DialogBox;
 
@@ -24,13 +25,15 @@ public class DialogManager : MonoBehaviour
     {
         Instance = this;
         _target = NormalFace;
-        
-        Invoke(nameof(StartLevelDialog),1f);
 
+        Invoke(nameof(StartLevelDialog), 1f);
     }
 
     public void SetFaceState(FoodEvent.BearState state)
     {
+        int i = Random.Range(1, 3);
+        string quote = "Quote" + i.ToString();
+        AudioManager._instance.Play(quote);
         switch (state)
         {
             case FoodEvent.BearState.Happy:
@@ -39,6 +42,7 @@ public class DialogManager : MonoBehaviour
                 HappyFace.SetActive(true);
                 AngryFace.SetActive(false);
                 NormalFace.SetActive(false);
+                AudioManager._instance.Play(quote);
                 break;
             case FoodEvent.BearState.Angry:
                 _target = AngryFace;
@@ -46,13 +50,15 @@ public class DialogManager : MonoBehaviour
                 AngryFace.SetActive(true);
                 HappyFace.SetActive(false);
                 NormalFace.SetActive(false);
+                AudioManager._instance.Play(quote);
                 break;
             case FoodEvent.BearState.Normal:
                 _target = NormalFace;
-
+                
                 NormalFace.SetActive(true);
                 HappyFace.SetActive(false);
                 AngryFace.SetActive(false);
+                AudioManager._instance.Play(quote);
                 break;
         }
     }
@@ -64,7 +70,6 @@ public class DialogManager : MonoBehaviour
         CancelInvoke(nameof(CleanText));
         StopCoroutine(nameof(Dialog));
         StartCoroutine(Dialog(dialog));
-
     }
 
     private IEnumerator Dialog(string dialog)
@@ -88,18 +93,18 @@ public class DialogManager : MonoBehaviour
     private void StartAnimation()
     {
         DOTween.Kill(_target.transform);
-       
-        _target.transform.DOLocalMoveX(-6, 0.3f).onComplete+= () =>
+
+        _target.transform.DOLocalMoveX(-6, 0.3f).onComplete += () =>
         {
-            _target.transform.DOLocalMoveX(6, 0.6f).SetLoops(-1,LoopType.Yoyo);
+            _target.transform.DOLocalMoveX(6, 0.6f).SetLoops(-1, LoopType.Yoyo);
         };
     }
 
-    
+
     private void StopAnimation()
     {
         DOTween.Kill(_target.transform);
-        _target.transform.DOLocalMoveX(0,0.3f);
+        _target.transform.DOLocalMoveX(0, 0.3f);
     }
 
     public void CleanText()
