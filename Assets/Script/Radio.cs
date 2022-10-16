@@ -26,7 +26,7 @@ public class Radio : MonoBehaviour
         StartAnimation();
         AudioManager._instance.MusicSource.volume = 0;
         AudioManager._instance.PlayMusic("Tarantella");
-        tween = AudioManager._instance.MusicSource.DOFade(1, 1.5f);
+        tween = AudioManager._instance.MusicSource.DOFade(.4f, 1.5f);
     }
 
     private void Press()

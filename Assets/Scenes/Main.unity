@@ -433,6 +433,10 @@ PrefabInstance:
       propertyPath: AllSounds.Array.data[16].name
       value: Pol
       objectReference: {fileID: 0}
+    - target: {fileID: 2829532588353893223, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3563265698321486936, guid: bbe13fde6e88d684cbc38ceac8c50a28, type: 3}
       propertyPath: m_Name
       value: AudioManager

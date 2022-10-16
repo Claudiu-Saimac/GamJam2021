@@ -10,5 +10,6 @@ public class LoadSecondScene : MonoBehaviour
     private void Awake()
     {
         SceneManager.LoadScene("Start",LoadSceneMode.Additive);
+       
     }
 }
