@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c68ecca54f3e51e4db723adc18ff99f4, type: 3}
-  m_Name: Level Two Recipe
+  m_Name: Level 3
   m_EditorClassIdentifier: 
   Recipes:
   - Steps:
@@ -20,6 +20,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
@@ -27,13 +28,15 @@ MonoBehaviour:
         Dialog: OK
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
-    - Type: 0
+    - Type: 9
       Sprite: {fileID: 21300000, guid: 20fbe2d45fce87040b08c66ee1b9fde8, type: 3}
       FoodEvent:
         Dialog: Well Done !
         LastStep: 1
         NeedRedo: 0
+        Pol: 0
         State: 0
   - Steps:
     - Type: 6
@@ -42,6 +45,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 7
       Sprite: {fileID: 21300000, guid: 4348f2107bf290549b104d8cc43c551a, type: 3}
@@ -49,6 +53,7 @@ MonoBehaviour:
         Dialog: 'Would you eat that? '
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 6
@@ -57,6 +62,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: d97e4996855181f4a8f630e98085594b, type: 3}
@@ -64,6 +70,7 @@ MonoBehaviour:
         Dialog: OK
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: 6362ec2c44b327248875a83b6284913c, type: 3}
@@ -71,6 +78,7 @@ MonoBehaviour:
         Dialog: That's a man sanwitch, but not ours
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 0
   - Steps:
     - Type: 5
@@ -79,6 +87,7 @@ MonoBehaviour:
         Dialog: No bread, no carbs
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 2
   - Steps:
     - Type: 4
@@ -87,6 +96,7 @@ MonoBehaviour:
         Dialog: Some bread maybe? We are in Ardeal
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 2
   - Steps:
     - Type: 8
@@ -95,6 +105,7 @@ MonoBehaviour:
         Dialog: You shold scramble those eggs first !
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 6
@@ -103,6 +114,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
@@ -110,6 +122,7 @@ MonoBehaviour:
         Dialog: 'Noice '
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 6
       Sprite: {fileID: 21300000, guid: cb64ac1dd67baa84e821f95ec4592d0e, type: 3}
@@ -117,6 +130,7 @@ MonoBehaviour:
         Dialog: Thats a sanwitch, you bitch
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 6
@@ -125,6 +139,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: d97e4996855181f4a8f630e98085594b, type: 3}
@@ -132,6 +147,7 @@ MonoBehaviour:
         Dialog: 'Noice '
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 8
       Sprite: {fileID: 21300000, guid: 204b64143d2ebd64a9eda5e87fb04e6d, type: 3}
@@ -139,6 +155,7 @@ MonoBehaviour:
         Dialog: Oh my god, really ? Egghead
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 6
@@ -147,6 +164,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: d97e4996855181f4a8f630e98085594b, type: 3}
@@ -154,6 +172,7 @@ MonoBehaviour:
         Dialog: 'Noice '
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 7
       Sprite: {fileID: 21300000, guid: b360876885d378b42abdef418d114993, type: 3}
@@ -161,5 +180,6 @@ MonoBehaviour:
         Dialog: Didn't you forgot some goddamn balls ?
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
-  LevelAllFoodTypes: 08000000050000000700000006000000060000000500000002000000
+  LevelAllFoodTypes: 080000000500000007000000060000000600000005000000150000001400000007000000

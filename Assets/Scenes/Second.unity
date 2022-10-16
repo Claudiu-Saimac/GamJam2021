@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetScene: Start
-  UnloadScene: FirstLevel
+  UnloadScene: Second
 --- !u!1 &212247146
 GameObject:
   m_ObjectHideFlags: 0
