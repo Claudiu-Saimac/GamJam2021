@@ -20,18 +20,21 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
       FoodEvent:
         Dialog: OK
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 0
       Sprite: {fileID: 21300000, guid: 20fbe2d45fce87040b08c66ee1b9fde8, type: 3}
       FoodEvent:
         Dialog: Well Done !
         LastStep: 1
         NeedRedo: 0
+        State: 0
   - Steps:
     - Type: 6
       Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
@@ -39,59 +42,60 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 7
-      Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
+      Sprite: {fileID: 21300000, guid: 4348f2107bf290549b104d8cc43c551a, type: 3}
       FoodEvent:
         Dialog: 'Would you eat that? '
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 1
   - Steps:
     - Type: 6
-      Sprite: {fileID: 21300000, guid: 4d20c4798019b6344ade7ea6171ffb91, type: 3}
+      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
       FoodEvent:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 4
-      Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
+      Sprite: {fileID: 21300000, guid: d97e4996855181f4a8f630e98085594b, type: 3}
       FoodEvent:
         Dialog: OK
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 4
-      Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
+      Sprite: {fileID: 21300000, guid: 6362ec2c44b327248875a83b6284913c, type: 3}
       FoodEvent:
         Dialog: That's a man sanwitch, but not ours
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 0
   - Steps:
     - Type: 5
       Sprite: {fileID: 21300000, guid: 23499b848dd119340b008a713dc6b194, type: 3}
       FoodEvent:
-        Dialog: 'Fara pita nu te saturi '
+        Dialog: No bread, no carbs
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 2
   - Steps:
     - Type: 4
       Sprite: {fileID: 21300000, guid: ce60be3f7fcbe5948a6b7503bf41b1a6, type: 3}
       FoodEvent:
-        Dialog: 'Fara pita nu te saturi '
+        Dialog: Some bread maybe? We are in Ardeal
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 2
   - Steps:
     - Type: 8
       Sprite: {fileID: 21300000, guid: 8d1220d78acdcca4f9104cf75f742c32, type: 3}
       FoodEvent:
         Dialog: You shold scramble those eggs first !
         LastStep: 0
-        NeedRedo: 0
-  - Steps:
-    - Type: 8
-      Sprite: {fileID: 21300000, guid: 8d1220d78acdcca4f9104cf75f742c32, type: 3}
-      FoodEvent:
-        Dialog: You shold scramble those eggs first !
-        LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 1
   - Steps:
     - Type: 6
       Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
@@ -99,18 +103,21 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 4
       Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
       FoodEvent:
         Dialog: 'Noice '
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 6
-      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      Sprite: {fileID: 21300000, guid: cb64ac1dd67baa84e821f95ec4592d0e, type: 3}
       FoodEvent:
         Dialog: Thats a sanwitch, you bitch
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 1
   - Steps:
     - Type: 6
       Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
@@ -118,18 +125,21 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 4
-      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      Sprite: {fileID: 21300000, guid: d97e4996855181f4a8f630e98085594b, type: 3}
       FoodEvent:
         Dialog: 'Noice '
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 8
-      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      Sprite: {fileID: 21300000, guid: 204b64143d2ebd64a9eda5e87fb04e6d, type: 3}
       FoodEvent:
         Dialog: Oh my god, really ? Egghead
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 1
   - Steps:
     - Type: 6
       Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
@@ -137,16 +147,19 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 4
-      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      Sprite: {fileID: 21300000, guid: d97e4996855181f4a8f630e98085594b, type: 3}
       FoodEvent:
         Dialog: 'Noice '
         LastStep: 0
         NeedRedo: 0
+        State: 2
     - Type: 7
-      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      Sprite: {fileID: 21300000, guid: b360876885d378b42abdef418d114993, type: 3}
       FoodEvent:
         Dialog: Didn't you forgot some goddamn balls ?
         LastStep: 0
-        NeedRedo: 0
+        NeedRedo: 1
+        State: 1
   LevelAllFoodTypes: 08000000050000000700000006000000060000000500000002000000
