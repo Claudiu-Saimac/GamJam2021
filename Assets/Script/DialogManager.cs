@@ -32,9 +32,9 @@ public class DialogManager : MonoBehaviour
 
     public void SetFaceState(FoodEvent.BearState state)
     {
-        int i ;
+        int i;
         string quote = "Quote";
-        AudioManager._instance.Play(quote);
+
         switch (state)
         {
             case FoodEvent.BearState.Happy:
@@ -66,6 +66,7 @@ public class DialogManager : MonoBehaviour
                 AudioManager._instance.Play(quote);
                 break;
         }
+
     }
 
     public void SetText(string dialog)
@@ -120,6 +121,9 @@ public class DialogManager : MonoBehaviour
 
     public void StartLevelDialog()
     {
+        int i = Random.Range(1, 3);
+        string quote = ("QuoteNormal" + i.ToString());
+        AudioManager._instance.Play(quote);
         SetText(StartDialog);
     }
 }
