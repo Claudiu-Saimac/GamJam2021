@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using DG.Tweening;
 using TMPro;
 using Unity.Mathematics;
@@ -31,8 +32,8 @@ public class DialogManager : MonoBehaviour
 
     public void SetFaceState(FoodEvent.BearState state)
     {
-        int i = Random.Range(1, 3);
-        string quote = "Quote" + i.ToString();
+        int i ;
+        string quote = "Quote";
         AudioManager._instance.Play(quote);
         switch (state)
         {
@@ -42,11 +43,14 @@ public class DialogManager : MonoBehaviour
                 HappyFace.SetActive(true);
                 AngryFace.SetActive(false);
                 NormalFace.SetActive(false);
+                i = Random.Range(1, 2);
+                quote = quote + ("Happy" + i.ToString());
                 AudioManager._instance.Play(quote);
                 break;
             case FoodEvent.BearState.Angry:
                 _target = AngryFace;
-
+                i = Random.Range(1, 2);
+                quote = quote + ("Angry" + i.ToString());
                 AngryFace.SetActive(true);
                 HappyFace.SetActive(false);
                 NormalFace.SetActive(false);
@@ -54,7 +58,8 @@ public class DialogManager : MonoBehaviour
                 break;
             case FoodEvent.BearState.Normal:
                 _target = NormalFace;
-                
+                i = Random.Range(1, 3);
+                quote = quote + ("Normal" + i.ToString());
                 NormalFace.SetActive(true);
                 HappyFace.SetActive(false);
                 AngryFace.SetActive(false);
