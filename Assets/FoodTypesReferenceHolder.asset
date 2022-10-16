@@ -51,3 +51,7 @@ MonoBehaviour:
     FoodItem: {fileID: 7780535616251924320, guid: 6841e0d1a2455354392af7039c13ef51, type: 3}
   - Type: 21
     FoodItem: {fileID: 235003882018924080, guid: 50fe13e0eda55164085f2a9db6ac11ef, type: 3}
+  - Type: 23
+    FoodItem: {fileID: 235003882018924080, guid: 09f0b043b11c87948a6882fe05ac52d7, type: 3}
+  - Type: 24
+    FoodItem: {fileID: 2423176634220500441, guid: 41bd3cc0e8d7c8f48abde7ceac9bc723, type: 3}

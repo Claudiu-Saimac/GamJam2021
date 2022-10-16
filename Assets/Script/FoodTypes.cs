@@ -6,5 +6,5 @@ public enum FoodTypes
     SoyMilk,
     Bacon, RawBacon, Bread, Cheese, Egg, ScrambledEgg, ScrambledEggWithCheese, Oil, Tomato, SlicedTomato, Salad, Toast, Crutons, Chicken, FriedChicken, ShrededFriedChicken,
     Pan,
-    MixingBowl, BowlWithEggs
+    MixingBowl, BowlWithEggs,Ketchup,Plate
 }

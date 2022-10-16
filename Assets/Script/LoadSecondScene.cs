@@ -9,6 +9,6 @@ public class LoadSecondScene : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        SceneManager.LoadScene(1,LoadSceneMode.Additive);
+        SceneManager.LoadScene("Start",LoadSceneMode.Additive);
     }
 }

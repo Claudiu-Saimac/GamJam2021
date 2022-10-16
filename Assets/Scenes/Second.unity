@@ -2563,13 +2563,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7b2d591f483e547830da58bbf5a23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelRecipe: {fileID: 11400000, guid: ebec4824e88401f4e9496203590114d3, type: 2}
+  LevelRecipe: {fileID: 11400000, guid: b2189c5f1320b77479b78ede3f7e4d20, type: 2}
   FoodSocket: {fileID: 818806229}
   Content: {fileID: 2170699844249553419}
   ItemHolderPrefab: {fileID: 6099961455363139267, guid: 5d357ba732189ca4a9cb97fc73a8e267, type: 3}
   ItemDragHolder: {fileID: 2043285003}
   Clock: {fileID: 2010877012}
-  LevelTime: 60
+  LevelTime: 90
   FoodEvolveStates: {fileID: 11400000, guid: 3afe5bf7e46348d468733f8e72db25d0, type: 2}
 --- !u!1 &1949648532
 GameObject:
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   NormalFace: {fileID: 1717747501}
   AngryFace: {fileID: 1852361442}
   HappyFace: {fileID: 1624430773}
-  StartDialog: I want a bowl of cereal
+  StartDialog: I want Scrambled Eggs with ketchup
 --- !u!224 &2010877009 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8461185267610380957, guid: 9ab19386572b131439541b0b94e9c09a, type: 3}

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68ecca54f3e51e4db723adc18ff99f4, type: 3}
+  m_Name: Level 2
+  m_EditorClassIdentifier: 
+  Recipes:
+  - Steps:
+    - Type: 24
+      Sprite: {fileID: 21300000, guid: 0fe304a2304af74468c8521f2ae7edc3, type: 3}
+      FoodEvent:
+        Dialog: Logic start
+        LastStep: 0
+        NeedRedo: 0
+        State: 2
+    - Type: 9
+      Sprite: {fileID: 21300000, guid: 985195d3cbd0e514c82fa351d6efe951, type: 3}
+      FoodEvent:
+        Dialog: Good so far
+        LastStep: 0
+        NeedRedo: 0
+        State: 0
+    - Type: 23
+      Sprite: {fileID: 21300000, guid: 87cf682d93250f649a1b84a2afada532, type: 3}
+      FoodEvent:
+        Dialog: Well Done !
+        LastStep: 1
+        NeedRedo: 0
+        State: 0
+  - Steps:
+    - Type: 9
+      Sprite: {fileID: 21300000, guid: 62c3794e643b8b3469f7cbc7b2c827e6, type: 3}
+      FoodEvent:
+        Dialog: 'You Forgot the Plate ! Redo! '
+        LastStep: 0
+        NeedRedo: 1
+        State: 1
+  - Steps:
+    - Type: 21
+      Sprite: {fileID: 21300000, guid: 8011d22b072cda3409b597635a7423b9, type: 3}
+      FoodEvent:
+        Dialog: 'That''s not where you place it!  Redo! '
+        LastStep: 0
+        NeedRedo: 1
+        State: 1
+  LevelAllFoodTypes: 1400000008000000150000001700000018000000
