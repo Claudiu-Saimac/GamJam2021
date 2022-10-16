@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScenesManager : MonoBehaviour
 {
     public static ScenesManager Instance;
+    public Scene sceneToUnload;
 
 
     private void Awake()
@@ -24,12 +26,19 @@ public class ScenesManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    
+
 
     public void LoadScene(int sceneIndex)
     {
      //  Tranzition.
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+       SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("Start"));
        // Fadeout
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex,LoadSceneMode.Additive);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
