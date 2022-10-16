@@ -7,17 +7,24 @@ public class FoodEvent
 
     public bool LastStep;
     public bool NeedRedo;
+    public bool Pol = false;
 
     public BearState State = BearState.Normal;
     public virtual void Invoke()
     {
-        DialogManager.Instance.SetFaceState(State);
+        if (Pol)
+        {
+            AudioManager._instance.Play("Pol");
+            DialogManager.Instance.SetFaceState(State, false);
+        }
+        else
+            DialogManager.Instance.SetFaceState(State);
 
         DialogManager.Instance.SetText(Dialog);
     }
 
     public enum BearState
     {
-        Happy,Angry,Normal
+        Happy, Angry, Normal
     }
 }

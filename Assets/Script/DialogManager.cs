@@ -30,7 +30,7 @@ public class DialogManager : MonoBehaviour
         Invoke(nameof(StartLevelDialog), 1f);
     }
 
-    public void SetFaceState(FoodEvent.BearState state)
+    public void SetFaceState(FoodEvent.BearState state, bool sound = true)
     {
         int i;
         string quote = "Quote";
@@ -43,27 +43,44 @@ public class DialogManager : MonoBehaviour
                 HappyFace.SetActive(true);
                 AngryFace.SetActive(false);
                 NormalFace.SetActive(false);
+
+                if(!sound)
+                    break;
+
                 i = Random.Range(1, 2);
                 quote = quote + ("Happy" + i.ToString());
                 AudioManager._instance.Play(quote);
                 break;
+
             case FoodEvent.BearState.Angry:
                 _target = AngryFace;
                 i = Random.Range(1, 2);
                 quote = quote + ("Angry" + i.ToString());
+
                 AngryFace.SetActive(true);
                 HappyFace.SetActive(false);
                 NormalFace.SetActive(false);
+
+                if (!sound)
+                    break;
+
                 AudioManager._instance.Play(quote);
+
                 break;
             case FoodEvent.BearState.Normal:
                 _target = NormalFace;
                 i = Random.Range(1, 3);
                 quote = quote + ("Normal" + i.ToString());
+
                 NormalFace.SetActive(true);
                 HappyFace.SetActive(false);
                 AngryFace.SetActive(false);
+
+                if (!sound)
+                    break;
+
                 AudioManager._instance.Play(quote);
+
                 break;
         }
 
