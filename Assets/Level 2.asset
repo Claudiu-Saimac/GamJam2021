@@ -20,6 +20,7 @@ MonoBehaviour:
         Dialog: 'You Forgot the Plate ! Redo! '
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 21
@@ -28,6 +29,7 @@ MonoBehaviour:
         Dialog: 'That''s not where you place it!  Redo! '
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 24
@@ -36,6 +38,7 @@ MonoBehaviour:
         Dialog: Logic start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 9
       Sprite: {fileID: 21300000, guid: 985195d3cbd0e514c82fa351d6efe951, type: 3}
@@ -43,6 +46,7 @@ MonoBehaviour:
         Dialog: Good so far
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 0
     - Type: 23
       Sprite: {fileID: 21300000, guid: 87cf682d93250f649a1b84a2afada532, type: 3}
@@ -50,6 +54,7 @@ MonoBehaviour:
         Dialog: Well Done !
         LastStep: 1
         NeedRedo: 0
+        Pol: 0
         State: 0
   - Steps:
     - Type: 24
@@ -58,6 +63,7 @@ MonoBehaviour:
         Dialog: Logic start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 9
       Sprite: {fileID: 21300000, guid: 985195d3cbd0e514c82fa351d6efe951, type: 3}
@@ -65,6 +71,7 @@ MonoBehaviour:
         Dialog: Good so far
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 7
       Sprite: {fileID: 21300000, guid: 985195d3cbd0e514c82fa351d6efe951, type: 3}
@@ -72,6 +79,7 @@ MonoBehaviour:
         Dialog: No ase cum ii place la Bunica!
         LastStep: 0
         NeedRedo: 0
+        Pol: 1
         State: 0
     - Type: 23
       Sprite: {fileID: 21300000, guid: 87cf682d93250f649a1b84a2afada532, type: 3}
@@ -79,5 +87,6 @@ MonoBehaviour:
         Dialog: Well Done !
         LastStep: 1
         NeedRedo: 0
+        Pol: 0
         State: 0
   LevelAllFoodTypes: 1400000008000000150000001700000018000000
