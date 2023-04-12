@@ -127,7 +127,7 @@ MonoBehaviour:
     - Type: 6
       Sprite: {fileID: 21300000, guid: cb64ac1dd67baa84e821f95ec4592d0e, type: 3}
       FoodEvent:
-        Dialog: Thats a sanwitch, you bitch
+        Dialog: Thats a sanwitch, you witch
         LastStep: 0
         NeedRedo: 1
         Pol: 0
@@ -182,4 +182,89 @@ MonoBehaviour:
         NeedRedo: 1
         Pol: 0
         State: 1
+  - Steps:
+    - Type: 9
+      Sprite: {fileID: 21300000, guid: 20fbe2d45fce87040b08c66ee1b9fde8, type: 3}
+      FoodEvent:
+        Dialog: A sandwitch sould contain bread !
+        LastStep: 0
+        NeedRedo: 1
+        Pol: 0
+        State: 1
+  - Steps:
+    - Type: 7
+      Sprite: {fileID: 21300000, guid: 8799d2e5e53df5043a48e68d5e2cdf24, type: 3}
+      FoodEvent:
+        Dialog: 'A sandwitch sould start with bread ! '
+        LastStep: 0
+        NeedRedo: 1
+        Pol: 0
+        State: 1
+  - Steps:
+    - Type: 7
+      Sprite: {fileID: 21300000, guid: 8799d2e5e53df5043a48e68d5e2cdf24, type: 3}
+      FoodEvent:
+        Dialog: A sandwitch sould start with bread ! Bread Pit
+        LastStep: 0
+        NeedRedo: 1
+        Pol: 0
+        State: 1
+  - Steps:
+    - Type: 6
+      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      FoodEvent:
+        Dialog: Good Start
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 2
+    - Type: 4
+      Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
+      FoodEvent:
+        Dialog: OK
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 2
+    - Type: 7
+      Sprite: {fileID: 21300000, guid: 20fbe2d45fce87040b08c66ee1b9fde8, type: 3}
+      FoodEvent:
+        Dialog: Well Done !
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 0
+    - Type: 9
+      Sprite: {fileID: 21300000, guid: 20fbe2d45fce87040b08c66ee1b9fde8, type: 3}
+      FoodEvent:
+        Dialog: Well Done !
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 0
+  - Steps:
+    - Type: 6
+      Sprite: {fileID: 21300000, guid: fccd84ed80eb07849a345e714029ae29, type: 3}
+      FoodEvent:
+        Dialog: Good Start
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 2
+    - Type: 4
+      Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
+      FoodEvent:
+        Dialog: OK
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 2
+    - Type: 7
+      Sprite: {fileID: 21300000, guid: 20fbe2d45fce87040b08c66ee1b9fde8, type: 3}
+      FoodEvent:
+        Dialog: Well Done !
+        LastStep: 0
+        NeedRedo: 0
+        Pol: 0
+        State: 0
   LevelAllFoodTypes: 080000000500000007000000060000000600000005000000150000001400000007000000

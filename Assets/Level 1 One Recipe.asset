@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c68ecca54f3e51e4db723adc18ff99f4, type: 3}
-  m_Name: Level One Recipe
+  m_Name: Level 1 One Recipe
   m_EditorClassIdentifier: 
   Recipes:
   - Steps:
@@ -20,6 +20,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 1
       Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
@@ -27,6 +28,7 @@ MonoBehaviour:
         Dialog: 'Good '
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 0
     - Type: 0
       Sprite: {fileID: 21300000, guid: 4a8a0535bbbdc9b42a62ed3441e8d050, type: 3}
@@ -34,6 +36,7 @@ MonoBehaviour:
         Dialog: Well Done !
         LastStep: 1
         NeedRedo: 0
+        Pol: 0
         State: 0
   - Steps:
     - Type: 2
@@ -42,6 +45,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 0
     - Type: 0
       Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
@@ -49,6 +53,7 @@ MonoBehaviour:
         Dialog: Seriously !? Milk first ? Redo!
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 2
@@ -57,6 +62,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 0
     - Type: 3
       Sprite: {fileID: 21300000, guid: 40571184c4d75e04e823b190cb0ef95e, type: 3}
@@ -64,6 +70,7 @@ MonoBehaviour:
         Dialog: 'Seriously !? Milk first ? And is Soy Milk, Redo! '
         LastStep: 0
         NeedRedo: 1
+        Pol: 0
         State: 1
   - Steps:
     - Type: 2
@@ -72,6 +79,7 @@ MonoBehaviour:
         Dialog: Good Start
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 2
     - Type: 1
       Sprite: {fileID: 21300000, guid: c681b897250087348ab07fdf89065ca8, type: 3}
@@ -79,6 +87,7 @@ MonoBehaviour:
         Dialog: 'Good '
         LastStep: 0
         NeedRedo: 0
+        Pol: 0
         State: 0
     - Type: 3
       Sprite: {fileID: 21300000, guid: 4a8a0535bbbdc9b42a62ed3441e8d050, type: 3}
@@ -86,5 +95,33 @@ MonoBehaviour:
         Dialog: I will accepted it ,But I don't like Soy Milk!
         LastStep: 1
         NeedRedo: 0
+        Pol: 0
         State: 0
+  - Steps:
+    - Type: 0
+      Sprite: {fileID: 21300000, guid: 8bf5a9c0e5d090441b1cd4efe15035f0, type: 3}
+      FoodEvent:
+        Dialog: 'Drink of the table dog ! '
+        LastStep: 1
+        NeedRedo: 1
+        Pol: 0
+        State: 1
+  - Steps:
+    - Type: 3
+      Sprite: {fileID: 21300000, guid: 8bf5a9c0e5d090441b1cd4efe15035f0, type: 3}
+      FoodEvent:
+        Dialog: 'Drink of the table dog ! '
+        LastStep: 1
+        NeedRedo: 1
+        Pol: 0
+        State: 1
+  - Steps:
+    - Type: 1
+      Sprite: {fileID: 21300000, guid: aaf0e2545e4bc1a43984d7ca041f3468, type: 3}
+      FoodEvent:
+        Dialog: Maybe bring a bowl first ?
+        LastStep: 1
+        NeedRedo: 1
+        Pol: 0
+        State: 1
   LevelAllFoodTypes: 02000000000000000100000003000000

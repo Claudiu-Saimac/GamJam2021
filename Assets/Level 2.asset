@@ -76,7 +76,7 @@ MonoBehaviour:
     - Type: 7
       Sprite: {fileID: 21300000, guid: 8cdd06e6e272bf340a5afcdfb32ed5d1, type: 3}
       FoodEvent:
-        Dialog: No ase cum ii place la Bunica!
+        Dialog: My grandmother's favourite !
         LastStep: 0
         NeedRedo: 0
         Pol: 1
